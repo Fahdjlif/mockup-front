@@ -56,7 +56,7 @@ import { CreateCategoryComponent } from './create-category/create-category.compo
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider('971753269976-n7spu5nm7ek9q3ab9l8isqo48vscnvq8.apps.googleusercontent.com'
+            provider: new GoogleLoginProvider('971753269976-21ss5ond5klv0m3utp5j3nnrb5m3hpll.apps.googleusercontent.com'
             ),
           },
           {
