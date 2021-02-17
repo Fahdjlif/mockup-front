@@ -25,8 +25,8 @@
       ]
     },
     {
-      "target": "login-social-front",
-      "public": "dist/login-social-front",
+      "target": "mockup-front",
+      "public": "dist/mockup-front",
       "ignore": [
         "**/.*"
       ],
