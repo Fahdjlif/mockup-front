@@ -10,7 +10,7 @@ const response = {headers: new HttpHeaders({'Content-Type' : 'application/json'}
 })
 export class OauthService {
 
-  oauthURL = 'http://localhost:8082/oauth/';
+  oauthURL = 'http://localhost:8080/mockup-0.0.1-SNAPSHOT/oauth/';
 
   constructor(private httpClient: HttpClient) { 
   
