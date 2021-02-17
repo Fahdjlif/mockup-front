@@ -8,7 +8,8 @@ import { ProductGuard } from './guards/product.guard';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'products', component: ProductComponent, canActivate: [ProductGuard] },
+  {path: 'products', component: ProductComponent},
+  //, canActivate: [ProductGuard] },
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
