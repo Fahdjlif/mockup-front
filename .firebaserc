@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mockup-front-60428": {
+      "hosting": {
+        "login-social-front": [
+          "mockup-front-60428"
+        ]
+      }
+    }
+  }
+}
