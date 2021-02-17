@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>Update Product</h2>
+<mat-dialog-content >
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="product.name" placeholder="name">
+  </mat-form-field>
+
+  
+  <mat-form-field>
+    <input matInput [(ngModel)]="product.description" placeholder="description">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="number" [(ngModel)]="product.quantity" placeholder="quantity">
+  </mat-form-field>
+  
+</mat-dialog-content>
+<mat-dialog-actions >
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button (click)="update()" cdkFocusInitial>Update</button>
+</mat-dialog-actions>

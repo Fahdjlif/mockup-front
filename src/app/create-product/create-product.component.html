@@ -1,0 +1,40 @@
+<h2 mat-dialog-title>Create Product</h2>
+<mat-dialog-content>
+  <mat-grid-list cols="1" rowHeight="3:1">
+  <mat-grid-tile>
+
+      <mat-form-field>
+        <input matInput [(ngModel)]="product.name" placeholder="name">
+      </mat-form-field>
+    </mat-grid-tile>
+      <mat-grid-tile>
+      <mat-form-field>
+        <input matInput [(ngModel)]="product.description" placeholder="description">
+      </mat-form-field>
+    </mat-grid-tile>
+      <mat-grid-tile>
+      <mat-form-field>
+        <input matInput type="number" [(ngModel)]="product.quantity" placeholder="quantity">
+      </mat-form-field>
+    </mat-grid-tile>
+
+      <mat-grid-tile>
+      <mat-form-field>
+        <mat-label>Category</mat-label>
+        <mat-select (selectionChange)="onChange($event.value)">
+          <mat-option ngDefaultControl *ngFor="let category of categories" [(ngModel)]="product.category" [value]="category">
+            {{category.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      </mat-grid-tile>
+      </mat-grid-list>
+     
+
+
+
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button (click)="save()" cdkFocusInitial>Create</button>
+</mat-dialog-actions>

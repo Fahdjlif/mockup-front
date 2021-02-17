@@ -1,0 +1,20 @@
+
+<h2 mat-dialog-title>Create category</h2>
+<mat-dialog-content >
+
+    <mat-grid-list cols="1" rowHeight="3:1">
+        <mat-grid-tile> <mat-form-field>
+        <input matInput [(ngModel)]="category.name" placeholder="name">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field>
+        <input matInput [(ngModel)]="category.description" placeholder="description">
+      </mat-form-field>
+           </mat-grid-tile>
+    </mat-grid-list>
+</mat-dialog-content>
+<mat-dialog-actions >
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button (click)="save()" cdkFocusInitial>Create</button>
+</mat-dialog-actions>

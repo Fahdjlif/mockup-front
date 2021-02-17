@@ -1,0 +1,41 @@
+<app-menu></app-menu>
+<mat-grid-list cols="3" rowHeight="3:1">
+  <mat-grid-tile><mat-form-field >
+    <mat-label>Category</mat-label>
+    <mat-select (selectionChange)="onChange($event.value)">
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let category of categories" [(value)]="category.id"> {{category.name}}</mat-option>
+    </mat-select>
+  </mat-form-field></mat-grid-tile>
+  <mat-grid-tile>
+    <button mat-raised-button (click)="createProduct()" color="primary">Add product</button></mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button (click)="createCategory()" color="primary">Add Category</button></mat-grid-tile>
+</mat-grid-list>
+<!-- <div style="margin: auto;width: 50%;">
+
+
+</div> -->
+<div style="margin: auto;width: 100%;">
+ 
+    <mat-card class="product-card" *ngFor="let product of splicedData">
+      <mat-card-header>
+        <mat-card-title>{{product.name}}</mat-card-title>
+        <mat-card-subtitle>ID: {{product.id}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://elcopcbonline.com/photos/product/4/176/4.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <a> Quantity : {{product.quantity}}</a>
+        <p> Category : {{product.category==null? "" :product.category.name}}</p>
+        <p>{{product.description}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button (click)="openDialog(product)" color="primary">EDIT</button>
+        <button mat-raised-button color="warn" (click)="deleteProduct(product.id)">DELETE</button>
+      </mat-card-actions>
+
+    </mat-card>
+    
+    <mat-paginator  #paginator  (page)="pageChangeEvent($event)"  [pageSizeOptions]="[8, 16, 24, 48]"></mat-paginator>
+  </div>
+  
