@@ -10,7 +10,7 @@ const headers = {headers: new HttpHeaders({'Content-Type' : 'application/json'})
 })
 export class CategoryService {
 
-  categoryUrl = 'http://localhost:8082/category';
+  categoryUrl = 'http://localhost:8080/mockup-0.0.1-SNAPSHOT/category';
   constructor(private httpClient: HttpClient, private tokenService:TokenService ) { }
 
   public getAll(): Observable<Category[]> {

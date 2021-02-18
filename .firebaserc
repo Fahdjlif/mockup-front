@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "mockup-front-d33b6"
+  },
+  "targets": {
+    "mockup-front-d33b6": {
+      "hosting": {
+        "mockup-front": [
+          "mockup-front-d33b6"
+        ]
+      }
+    }
+  }
+}

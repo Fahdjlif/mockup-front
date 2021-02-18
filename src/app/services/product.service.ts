@@ -10,7 +10,7 @@ const headers = {headers: new HttpHeaders({'Content-Type' : 'application/json'})
 })
 export class ProductService {
 
-  productURL = 'http://localhost:8082/product';
+  productURL = 'http://localhost:8080/mockup-0.0.1-SNAPSHOT/product';
   constructor(private httpClient: HttpClient, private tokenService:TokenService ) { }
 
   public getAll(): Observable<Product[]> {
